@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+	
+	
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="EXPIRES" content="NOW" />
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+<meta http-equiv="PRAGMA" content="NO-CACHE" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="icon" href="images/radio.ico" type="image/x-icon" />
+<link href="style/css/style.css" rel="stylesheet" type="text/css"
+	media="screen" />
+<script language="javascript" src="behaviour/javaScript/main.js"
+	type="text/javascript"></script>
+<title>Warwick Wireless Admin</title>
+</head>
+<body>
+
+
+
+
+
+<div id="up_div">
+<div id="header">
+
+<ul>
+	<li><a class="menuItem" href="admin.jsp?page=rawData">Raw Data</a></li>
+	<li><a class="menuItem" href="admin.jsp">Setup Users</a></li>
+	<li><a class="menuItem" href="admin.jsp?page=logOut">Logout</a></li>
+</div>
+</div>
+
+
+
+
+
+
+
+		
+
+<div id="mid_div">
+  <div id="body_pan">
+  
+	
+  
+<form action="admin/adminActions.jsp" method="post">
+<table>
+	<!-- error message area -->
+	<tr>
+		<td height="50px" colspan="6"></td>
+	</tr>
+	<!--  End Error -->
+
+	<!--  User -->
+	<tr>
+		<td class="labelColumn">Users :</td>
+		<td class="fieldsColumn" colspan="3"><select name="selectedUser"
+			onChange="this.form.submit();">
+			<option value="ATSS1" />ATSS1
+<option value="Dabbrook" />Dabbrook
+<option value="demo" />demo
+<option value="EDTAutomotive" />EDTAutomotive
+<option value="Electrotec" />Electrotec
+<option value="Genesis" />Genesis
+<option value="Genesis1" />Genesis1
+<option value="Indarco" />Indarco
+<option value="Langham" />Langham
+<option value="Loweref" />Loweref
+<option value="norstrom" />norstrom
+<option value="Powertech" />Powertech
+<option value="Renewables1" />Renewables1
+<option value="Renewables2" />Renewables2
+<option value="Renewables3" />Renewables3
+<option value="scot" />scot
+<option value="Solarwind" />Solarwind
+<option value="Test" />Test
+<option value="Tharsus" />Tharsus
+<option value="Topfuel" />Topfuel
+<option value="Total" />Total
+<option value="username" />username
+<option value="warwick" />warwick
+
+		</select></td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Select User">Refresh</button>
+		</td>
+		<td class="deviceListColumn" rowspan="7">
+
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="5">
+		<hr></hr>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="labelColumn">Username :</td>
+		<td class="filedsColumn" colspan="4"><input name="userName"
+			type="text" value="" maxlength="50" /></td>
+	</tr>
+	<tr>
+		<td class="labelColumn">Password :</td>
+		<td class="filedsColumn" colspan="4"><input name="password"
+			type="password" value=""  maxlength="50"/></td>
+	</tr>
+	<tr>
+		<td class="labelColumn">Company Name :</td>
+		<td class="filedsColumn" colspan="4"><input name="companyName"
+			type="text" value="" maxlength="50" /></td>
+	</tr>
+	<tr>
+		<td class="labelColumn">Description :</td>
+		<td class="filedsColumn" colspan="4"><input name="description"
+			type="text" value=""  maxlength="50" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Add User">Add
+		User</button>
+		</td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Update User">Update
+		User</button>
+		</td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Delete User">Delete
+		User</button>
+		</td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Clear Fields">Clear
+		Fields</button>
+		</td>
+	</tr>
+	<!--  End User -->
+
+	<!--  Device -->
+	<tr>
+		<td colspan="6">
+		<hr></hr>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="labelColumn">Device :</td>
+		<td class="filedsColumn" colspan="3"><select
+			name="selectedSenderId">
+			
+
+		</select></td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Select Device">Refresh</button>
+		</td>
+		<td class="deviceListColumn" rowspan="6">
+	
+		</td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td class="buttonColumn"></td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Delete Data">Delete
+		Data</button>
+		</td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Delete Device">Delete
+		Device</button>
+		</td>
+		<td class="buttonColumn"></td>
+	</tr>
+
+	<tr>
+		<td colspan="5" height="10px">
+		<hr></hr>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="labelColumn">Device Id :</td>
+		<td class="filedsColumn" colspan="4"><input name="senderId"
+			type="text" value="" maxlength="50"/></td>
+	</tr>
+	<tr>
+		<td class="labelColumn">User :</td>
+		<td class="filedsColumn" colspan="4"><input type="text"
+			name="selectedDeviceUser" value="" READONLY /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="buttonColumn"></td>
+		<td class="buttonColumn"></td>
+		<td class="buttonColumn">
+		<button type="submit" name="button" value="Add Device">Add
+		Device</button>
+		</td>
+		<td class="buttonColumn"></td>
+		
+	</tr>
+
+
+	<!--  End Device -->
+	
+		<tr>
+		<td colspan="5" height="10px">
+		<hr></hr>
+		</td>
+	</tr>
+	</form>
+	
+	<td>Logo :</td>
+					<td colspan="3">
+					
+					<form name="logo" action="admin/logoupload.jsp" type="file"
+						method="post" enctype="multipart/form-data" /><input type="file"
+						name="logoUpload">
+					<button type="submit" name="submitLogo" value="Upload">Upload</button>
+					</form>
+					</td>
+
+</table>
+
+
+</div></div>
+
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+<div id="footer">
+<div id="foo">
+
+<p>Copyright &copy; 2009-2010 M2M-Telemetry.com. All Rights Reserved.</p>
+<p>CSS: <a href="http://www.templateworld.com/">Template World</a></p>
+
+</div>
+</div>
+
+</body>
+</html>
